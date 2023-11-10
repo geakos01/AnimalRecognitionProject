@@ -54,7 +54,7 @@ The training set was augmented with additional images.
 
 ## Transfer Learning
 
-After creating the train-test split, preprocessing data, and importing the Dense 121 model, transfer learning was performed. The last layer was replaced with additional Dense layers, and the original model's weights were set to untrainable. The output is a dense layer with softmax activation, and the number of neurons matches the number of classes.
+After creating the train-test split, preprocessing data, and importing the Dense 121 model, transfer learning was performed. The last layer was replaced with additional Dense layers, and the original model's weights were set to untrainable. The output layer has softmax activation, and the number of neurons matches the number of classes.
 
 ## Hyperparameter Optimization
 
