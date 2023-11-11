@@ -18,7 +18,7 @@ The aim of this project is to create a model using transfer learning that can pr
 
 ## About the Data
 
-The data for this project was collected from two Kaggle datasets:
+This project utilizes labeled animal images with high usability obtained from two Kaggle datasets:
 1. [Animals10 Dataset](https://www.kaggle.com/datasets/alessiocorrado99/animals10)
 2. [Animal Classification Dataset](https://www.kaggle.com/datasets/ayushv322/animal-classification?rvi=1)
 
@@ -26,7 +26,9 @@ Images were gathered from 13 classes, with 1000 images collected from each class
 
 ## Selecting Model
 
-Various models, including VGG16, Xception, and Dense 121, were considered. Due to computational limitations, Dense 121 was chosen for further experimentation.
+Various models, including [VGG16](https://www.tensorflow.org/api_docs/python/tf/keras/applications/vgg16/VGG16),
+[Xception](https://www.tensorflow.org/api_docs/python/tf/keras/applications/xception/Xception),
+and [Dense121](https://www.tensorflow.org/api_docs/python/tf/keras/applications/densenet/DenseNet121), were considered. Due to computational limitations, [Dense121](https://www.tensorflow.org/api_docs/python/tf/keras/applications/densenet/DenseNet121) was chosen for further experimentation.
 
 ## Preprocess Images
 
@@ -61,8 +63,15 @@ After creating the train-test split, preprocessing data, and importing the Dense
 After creating a base model, a hyperparameter search was conducted to find the best values for:
 - Number of dense layers
 - Number of neurons in dense layers
-- Regularization in dense layers
+- L2 regularization in dense layers
 - Learning rate
+
+The best model was selected based on validation accuracy.
+Number of dense layers was 3 with the following structure:
+- Neurons: [64, 448, 448]
+- Regularization: [1.0674541740374033e-05, 0.0007109784706913827, 0.00010575697475283587]
+
+The learning rate was set to 0.00012322526568996265
 
 ## Error Investigation
 
