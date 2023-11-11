@@ -15,6 +15,7 @@ The aim of this project is to create a model using transfer learning that can pr
 7. **Hyperparameter Optimization**
 8. **Error Investigation**
 9. **Creating Prototype**
+10. **Computational Resources**
 
 ## About the Data
 
@@ -79,11 +80,25 @@ Upon finding the best model, error analysis was conducted by plotting problemati
 
 ## Results
 
-The model achieved over 96.3% accuracy on the test set. Some errors were attributed to human label misclassifications.
+The model demonstrated a test set accuracy surpassing 96.3%. Some errors in 
+predictions were identified, attributed to misclassifications in the
+human-labeled data. Notably, top-performing models on Kaggle achieved 98.03% accuracy when
+evaluated on the validation data from the 
+[Animals10 Dataset](https://www.kaggle.com/datasets/alessiocorrado99/animals10)
+and 88.1% accuracy on the 
+[Animal Classification Dataset](https://www.kaggle.com/datasets/ayushv322/animal-classification?rvi=1).
 
 ## Create Prototype
 
 The best model was saved and used in the `streamlit_demo.py` program. Users can upload an image of an animal, and the program will predict its class.
+
+## Computational Resources
+
+The model was trained on a Google Colab Pro instance with the following specifications:
+- T4 GPU
+- 51 GB RAM
+
+The training process took approximately 6 minutes.
 
 ## Author
 
